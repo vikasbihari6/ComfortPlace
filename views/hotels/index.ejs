@@ -1,0 +1,73 @@
+<% layout('layouts/boilerplate') %> 
+<link rel="stylesheet" href="/stylesheets/index.css">
+<link rel="stylesheet" href="/stylesheets/darkmode.css">
+<link rel="stylesheet" href="/stylesheets/preloader.css">
+<!-- <style>
+  #hotbtn{
+    background-color: #35455d!important;
+  }
+</style> -->
+
+<div class="load-wrapper">
+  <span class="loader"><span class="loader-inner"></span></span>
+</div>
+
+<h1 class="hover-border">ALL HOTELS</h1><hr>
+
+
+  
+<div class="new">
+  <a class=" btn btn-lg btnnew"  href="/hotels/new">Add new Hotel</a>
+</div>
+
+<br><br>
+
+<div class="d-flex justify-content-center searchOuter">
+  <div class="searchbar">
+    <input class="search_input" id="myInput" type="text" name="" placeholder="Search hotels..." onkeyup="searchFx()">
+    <span id="getHotel" class="search_icon"><i class="fas fa-search"></i></span>
+  </div>
+</div>
+
+<hr>
+
+<ul id="myUl">
+  <div class="row mb-3">
+    <% for (let hotel of hotels) {  %> 
+      
+        <div class="card-container col-md-4 col-sm-4 mb-5 mr-3">
+        <div class="inside" >
+        <div class="col-md-4 imageChange ">
+          <img class="img-fluid" alt="" src="<%= hotel.image %> ">
+        </div>
+      </div>
+        <div class="card-body ">
+        <figure class="col-md-8 front">
+            <h3 class="card-title" id="myNames"><%= hotel.name %> </h3>
+            <br>
+            <h5 class="card-text">
+              <small class="text-muted"><%= hotel.city %> </small>
+            </h5>
+            <h5 class="card-text">
+              <small class="text-muted">Price: $ <%= hotel.price %> </small>
+            </h5>
+            
+          </figure>
+
+        <figure class="back text-center">
+        <p class="left">  <%= hotel.description.substring(0,169)+'...' %></p>
+        <a class="btn btn-primary" href="hotels/<%= hotel._id %> ">View <%= hotel.name %> </a>
+      </figure>
+    </div>
+    </div>
+
+    <% }%>
+
+  </div>
+</ul>
+
+<a id="scroll-to-top" href="#" class="btn btn-primary btn-lg" role="button" title="Return to top of page" data-toggle="tooltip" data-placement="left"><i class="fa fa-arrow-up"></i></a>
+
+
+<script src="/javascripts/darkmode.js" defer></script>
+<script src="/javascripts/index.js" defer></script>
