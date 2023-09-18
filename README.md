@@ -55,6 +55,6 @@ Open your web browser and navigate to http://localhost:3000 to use the Comfort P
 
 Acknowledgments
 Thanks to the developers and contributors who helped build Comfort Place.
-Contact : If you have any questions or issues, feel free to contact us at vikasbihari6@example.com.
+Contact : If you have any questions or issues, feel free to contact us at vikasbihari6@gmail.com.
 
 Feel free to modify and expand this README according to your project's specific details and requirements. Providing clear and concise instructions will make it easier for others to understand, use, and contribute to your "Comfort Place" project on GitHub.
